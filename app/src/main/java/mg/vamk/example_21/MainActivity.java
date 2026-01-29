@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.util.Log;
-import com.example.example2_1.R; // R class is generated in this package
+import com.example.example2_1.R;
 
 public class MainActivity extends AppCompatActivity {
     String tag="EVH_Demo: ";
