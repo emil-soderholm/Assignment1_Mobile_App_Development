@@ -2,6 +2,7 @@ package com.example.example2_1
 
 import android.os.Bundle
 import android.util.Log
+import android.view.MotionEvent
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -74,6 +75,13 @@ class MainActivity : AppCompatActivity() {
     override fun onRestart() {
         super.onRestart()
         logElapsedTime("onRestart")
+    }
+
+    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
+        if (ev?.action == MotionEvent.ACTION_DOWN) {
+            logElapsedTime("UserTouch")
+        }
+        return super.dispatchTouchEvent(ev)
     }
 
     override fun onDestroy() {
